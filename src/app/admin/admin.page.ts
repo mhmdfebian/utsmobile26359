@@ -12,6 +12,7 @@ import { HomeService } from '../home/home.service';
 export class AdminPage implements OnInit {  
   barang: Home[];
   loadedBarang: Home;
+  
   constructor(
     private homeService: HomeService,
     private router: Router,
