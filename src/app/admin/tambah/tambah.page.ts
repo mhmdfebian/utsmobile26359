@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { AlertController, ToastController } from '@ionic/angular';
 import { Home } from 'src/app/home/home.model';
 import { HomeService } from 'src/app/home/home.service';
+import { runInThisContext } from 'vm';
 
 @Component({
   selector: 'app-tambah',
@@ -26,6 +27,7 @@ export class TambahPage implements OnInit {
 
   ngOnInit() {
     this.tempId = this.homeService.getAllBarang().length;
+    this.tempId = this.tempId + 1;
     this.tambahBarang = new FormGroup({
       foto: new FormControl(null, {
         updateOn: 'blur',

@@ -98,7 +98,7 @@ export class HomeService {
     {
       id: '6',
       tipe: 'CPU',
-      foto: 'https://www.asus.0b68418c9b23538b3b0344624627b7cc/media/global/products/cBG2qm5wXMAqScSJ/P_setting_fff_1_90_end_600.png',
+      foto: 'https://cf.shopee.co.id/file/0b68418c9b23538b3b0344624627b7cc',
       merek: 'Intel',
       model: 'Core i9-10850K',
       base_clock: '3.6',
@@ -154,7 +154,7 @@ export class HomeService {
     lastId: string
     ){
       length = this.barang.length;
-      lastId = ""+ tempId+1;
+      lastId = ""+ tempId;
       this.barang.push({
         id: lastId,
         foto: tambahBarang.foto,
