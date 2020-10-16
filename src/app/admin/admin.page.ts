@@ -32,8 +32,8 @@ export class AdminPage implements OnInit {
 
   async presentAlert(barangId: string){
     const alert = await this.alertCtrl.create({
-      header: 'Delete',
-      message: 'Yakin dihapus?',
+      header: 'Hapus',
+      message: 'Apakah anda yakin ingin Menghapus barang ini?',
       buttons: [
         {
           text: 'Batal',

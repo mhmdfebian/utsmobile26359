@@ -84,7 +84,7 @@ export class TambahPage implements OnInit {
   async tambah() {
     const alert = await this.alertController.create({
       header: 'Tambah',
-      message: 'Apakah anda yakin ingin menambahak barang baru?',
+      message: 'Apakah anda yakin ingin menambahkan barang baru?',
       buttons: [
         {
           text: 'Batal',

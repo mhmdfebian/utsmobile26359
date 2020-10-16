@@ -87,11 +87,11 @@ export class EditPage implements OnInit {
 
   async edit() {
     const alert = await this.alertController.create({
-      header: 'Edit barang',
+      header: 'Edit',
       message: 'Apakah anda yakin ingin mengubah barang ini?',
       buttons: [
         {
-          text: 'Tidak',
+          text: 'Batal',
           role: 'cancel',
         },
         {
