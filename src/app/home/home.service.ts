@@ -94,6 +94,23 @@ export class HomeService {
       ukuran: '',
       chipset: '',
       prosesor: '',
+    },
+    {
+      id: '6',
+      tipe: 'CPU',
+      foto: 'https://www.asus.0b68418c9b23538b3b0344624627b7cc/media/global/products/cBG2qm5wXMAqScSJ/P_setting_fff_1_90_end_600.png',
+      merek: 'Intel',
+      model: 'Core i9-10850K',
+      base_clock: '3.6',
+      boost_clock: '5.2',
+      core:'10',
+      thread: '20',
+      harga: 3350000,
+      stok: '4',
+      speed: '',
+      ukuran: '',
+      chipset: '',
+      prosesor: '',
     }
   ]
 
@@ -137,7 +154,7 @@ export class HomeService {
     lastId: string
     ){
       length = this.barang.length;
-      lastId = ""+ tempId;
+      lastId = ""+ tempId+1;
       this.barang.push({
         id: lastId,
         foto: tambahBarang.foto,
