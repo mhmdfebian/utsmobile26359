@@ -105,7 +105,7 @@ export class HomeService {
       boost_clock: '5.2',
       core:'10',
       thread: '20',
-      harga: 3350000,
+      harga: 7399000,
       stok: '4',
       speed: '',
       ukuran: '',
