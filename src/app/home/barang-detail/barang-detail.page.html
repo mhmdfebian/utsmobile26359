@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button fill="clear" slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" size-sm="4" offset-sm="4" ng-reflect-size="12">
+        <ion-card>
+          <ion-img [src]="loadedBarang.foto"></ion-img>
+          <ion-card-header>
+            <ion-card-title>{{ loadedBarang.merek + " " + loadedBarang.model }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-label>
+              <h2>{{ loadedBarang.harga | currency:"Rp ":true:"1.0" }}</h2>
+              <h2>{{ "Tersedia: " + loadedBarang.stok }}</h2>
+            </ion-label>
+          </ion-card-content>
+
+          <div *ngIf="loadedBarang.tipe === 'CPU'">
+            <ion-card-content>
+              <ion-label>
+                <h2><b>Tentang produk</b></h2>
+              </ion-label>
+              <ion-label>
+                <h2>{{ "Base Clock: " + loadedBarang.baseClock + " Ghz" }}</h2>
+                <h2>{{ "Boost Clock: " + loadedBarang.boostClock + " Ghz" }}</h2>
+                <h2>{{ "Core #: " + loadedBarang.core }}</h2>
+                <h2>{{ "Thread #: " + loadedBarang.thread }}</h2>
+              </ion-label>
+            </ion-card-content>
+          </div>
+      
+          <div *ngIf="loadedBarang.tipe === 'RAM'">
+            <ion-card-content>
+              <ion-label>
+                <h2><b>Tentang produk</b></h2>
+              </ion-label>
+              <ion-label>
+                <h2>{{ "Speed: " + loadedBarang.speed}}</h2>
+                <h2>{{ "Ukuran: " + loadedBarang.ukuran + "GB"}}</h2>
+              </ion-label>
+            </ion-card-content>
+          </div>
+      
+          <div *ngIf="loadedBarang.tipe === 'Motherboard'">
+            <ion-card-content>
+              <ion-label>
+                <h2><b>Tentang produk</b></h2>
+              </ion-label>
+              <ion-label>
+                <h2>{{ "Chipset: " + loadedBarang.chipset}}</h2>
+                <h2>{{ "Processor: " + loadedBarang.prosesor}}</h2>
+              </ion-label>
+            </ion-card-content>
+          </div>
+        
+          <div *ngIf="loadedBarang.tipe === 'GPU'">
+            <ion-card-content>
+              <ion-label>
+                <h2><b>Tentang produk</b></h2>
+              </ion-label>
+              <ion-label>
+                <h2>{{ "Merk: " + loadedBarang.merek}}</h2>
+                <h2>{{ "Model: " + loadedBarang.model}}</h2>
+              </ion-label>
+            </ion-card-content>
+          </div>
+          
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+</ion-content>

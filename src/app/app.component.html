@@ -1,3 +1,34 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu side="start" menuId="menu">
+    
+    <ion-content>
+      <ion-list>
+        <ion-menu-toggle menu="menu">
+          <ion-item lines="none" routerLink="/home">
+            <ion-label>Home</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle menu="menu">
+          <ion-item lines="none" routerLink="/admin">
+            <ion-label>Admin</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle menu="menu">
+          <ion-item lines="none" routerLink="/about-app">
+            <ion-label>About App</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>    
+    </ion-content>
+
+    <ion-footer>
+      <ion-menu-toggle menu="menu">
+        <ion-item line="none" href="https://www.youtube.com/channel/UCOmHUn--16B90oW2L6FRR3A">
+          <ion-label>Exit</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+    </ion-footer>
+
+  </ion-menu> 
+  <ion-router-outlet main></ion-router-outlet>
 </ion-app>

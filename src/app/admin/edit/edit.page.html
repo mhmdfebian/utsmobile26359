@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Edit Barang</ion-title>
+    <ion-back-button slot="start" defaultHref="/admin"></ion-back-button>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <form [formGroup]="editBarang">
+    <ion-item>
+      <ion-label position="stacked">URL Foto</ion-label>
+      <ion-input type="text" formControlName="foto" value="{{loadedBarang.foto}}"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Merek</ion-label>
+      <ion-input type="text" formControlName="merek" value="{{loadedBarang.merek}}"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Model</ion-label>
+      <ion-input  type="text" formControlName="model" value="{{loadedBarang.model}}"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Harga</ion-label>
+      <ion-input type="number" formControlName="harga" value="{{loadedBarang.harga}}">Rp. </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Stok</ion-label>
+      <ion-input  type="text" formControlName="stok" value="{{loadedBarang.stok}}"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="loadedBarang.tipe === 'CPU'">
+      <ion-label position="stacked">Base Clock</ion-label>
+      <ion-input  type="text" formControlName="base_clock" value="{{loadedBarang.base_clock}}"></ion-input>
+      <h4 slot="end">Ghz</h4>
+    </ion-item>
+    <ion-item *ngIf="loadedBarang.tipe === 'CPU'">
+      <ion-label position="stacked">Boost Clock</ion-label>
+      <ion-input  type="text" formControlName="boost_clock" value="{{loadedBarang.boost_clock}}"></ion-input>
+      <h4 slot="end">Ghz</h4>
+    </ion-item>
+    <ion-item *ngIf="loadedBarang.tipe === 'CPU'">
+      <ion-label position="stacked">Jumlah Core</ion-label>
+      <ion-input  type="text" formControlName="core" value="{{loadedBarang.core}}"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="loadedBarang.tipe === 'CPU'">
+      <ion-label position="stacked">Jumlah Thread</ion-label>
+      <ion-input  type="text" formControlName="thread" value="{{loadedBarang.thread}}"></ion-input>
+    </ion-item>
+  
+    <ion-item *ngIf="loadedBarang.tipe === 'RAM'">
+      <ion-label position="stacked">Speed</ion-label>
+      <ion-input  type="text" formControlName="speed" value="{{loadedBarang.speed}}"></ion-input>
+      <h4 slot="end">Mhz</h4>
+    </ion-item>
+    <ion-item *ngIf="loadedBarang.tipe === 'RAM'">
+      <ion-label position="stacked">Ukuran</ion-label>
+      <ion-input  type="text" formControlName="ukuran" value="{{loadedBarang.ukuran}}"></ion-input>
+      <h4 slot="end">GB</h4>
+    </ion-item>
+  
+    <ion-item *ngIf="loadedBarang.tipe === 'Motherboard'">
+      <ion-label position="stacked">Chipset</ion-label>
+      <ion-input  type="text" formControlName="chipset" value="{{loadedBarang.chipset}}"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="loadedBarang.tipe === 'Motherboard'">
+      <ion-label position="stacked" >Prosesor Compatible</ion-label>
+      <ion-input  type="text" formControlName="prosesor" value="{{loadedBarang.prosesor}}"></ion-input>
+    </ion-item>
+  
+    <ion-button expand="full" (click)=edit()>Selesai</ion-button>
+
+  </form>
+</ion-content>
