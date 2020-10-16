@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { AlertController, ToastController } from '@ionic/angular';
 import { Home } from 'src/app/home/home.model';
 import { HomeService } from 'src/app/home/home.service';
-import { runInThisContext } from 'vm';
+
 
 @Component({
   selector: 'app-tambah',
